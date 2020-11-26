@@ -1,0 +1,66 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Calculator WPF Demo" Height="520" Width="800" FontSize="36">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--Number Button-->
+        <Button x:Name="btn7" Grid.Column="0" Grid.Row="2" Click="btn7_Click">7</Button>
+        <Button x:Name="btn8" Grid.Column="1" Grid.Row="2" Click="btn8_Click">8</Button>
+        <Button x:Name="btn9" Grid.Column="2" Grid.Row="2" Click="btn9_Click">9</Button>
+        <Button x:Name="btn4" Grid.Column="0" Grid.Row="3" Click="btn4_Click">4</Button>
+        <Button x:Name="btn5" Grid.Column="1" Grid.Row="3" Click="btn5_Click">5</Button>
+        <Button x:Name="btn6" Grid.Column="2" Grid.Row="3" Click="btn6_Click">6</Button>
+        <Button x:Name="btn1" Grid.Column="0" Grid.Row="4" Click="btn1_Click">1</Button>
+        <Button x:Name="btn2" Grid.Column="1" Grid.Row="4" Click="btn2_Click">2</Button>
+        <Button x:Name="btn3" Grid.Column="2" Grid.Row="4" Click="btn3_Click">3</Button>
+        <Button x:Name="btn0" Grid.Column="0" Grid.Row="5" Click="btn0_Click">0</Button>
+
+        <!--Trigonometric button-->
+        <Button x:Name="btn_sinh" Grid.Column="1" Grid.Row="5" Click="btn_sinh_Click">Sinh</Button>
+        <Button x:Name="btn_cosh" Grid.Column="2" Grid.Row="5" Click="btn_cosh_Click">Cosh</Button>
+        <Button x:Name="btn_tanh" Grid.Column="0" Grid.Row="6">tanh</Button>
+
+        <!--Maths button-->
+        <Button x:Name="btn_equal" Grid.Column="3" Grid.Row="2" Click="btn_equal_Click">=</Button>
+        <Button x:Name="btn_minus" Grid.Column="3" Grid.Row="3" Click="btn_minus_Click">-</Button>
+        <Button x:Name="btn_add" Grid.Column="3" Grid.Row="4" Click="btn_add_Click">+</Button>
+        <Button x:Name="btn_mutli" Grid.Column="3" Grid.Row="5" Click="btn_mutli_Click">*</Button>
+        <Button x:Name="btn_divide" Grid.Column="3" Grid.Row="6" Click="btn_divide_Click">/</Button>
+        <Button x:Name="btn_mod" Grid.Column="4" Grid.Row="1" Click="btn_mod_Click" >%</Button>
+        <Button x:Name="btn_dot" Grid.Column="2" Grid.Row="6">.</Button>
+
+        <!--Clear button-->
+        <Button x:Name="btnclearAll" Grid.Column="1" Grid.Row="5" Click="btnclearAll_Click" Height="72" Margin="0,72,0,0" Grid.RowSpan="2" VerticalAlignment="Top">C</Button>
+        <Button x:Name="btnClearentry" Grid.Column="1" Grid.Row="1" Click="btnClearentry_Click">CE</Button>
+        <Button x:Name="btnspacechange" Grid.Column="2" Grid.Row="1" Content="&lt;=" Click="btnspacechange_Click"></Button>
+        <!--positive negative button-->
+        <Button x:Name="btnpositivenegative" Grid.Column="0" Grid.Row="1" Click="btnpositivenegative_Click">+-</Button>
+
+        <!--Textbox-->
+        <TextBox x:Name="txtDisplay" IsReadOnly="True" TextAlignment="Right" VerticalContentAlignment="Bottom" FontSize="30" BorderThickness="0" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">0</TextBox>
+
+
+    </Grid>
+
+
+</Window>
